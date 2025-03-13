@@ -1,0 +1,137 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Poster Container */
+.poster-container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left Side: Coffee Image */
+.coffee-image {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.coffee-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+/* Right Side: Content */
+.content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, #d4a762, #b88c4a);
+  color: #3e2723;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bold Title */
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #3e2723;
+}
+
+/* Location */
+.location {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #3e2723;
+}
+
+/* Description */
+.description {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #3e2723;
+  font-style: italic;
+}
+
+/* Contact Info */
+.contact-info {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #3e2723;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #3e2723;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background: #3e2723;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #6f4e37;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Decoration */
+.content::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.content::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
